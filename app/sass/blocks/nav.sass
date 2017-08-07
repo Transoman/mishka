@@ -1,0 +1,239 @@
+.nav
+	background-color: #fff
+
+	&__toggle
+		position: absolute
+		top: 30px
+		right: 30px
+		width: 20px
+		height: 20px
+		padding: 0
+		background: none
+		border: 0
+		outline: none
+		font-size: 0
+		z-index: 1
+
+		&-inner
+			position: relative
+			display: block
+			width: 20px
+			height: 2px
+			background-color: #000
+			transition: all .25s ease
+			&::before, &::after
+				content: ''
+				position: absolute
+				top: -6px
+				left: 0
+				width: 20px
+				height: 2px
+				background-color: #000
+				transition: all .25s ease
+			&::after
+				top: 6px
+
+	&__list
+		display: flex
+		flex-direction: column
+		margin: 0
+		padding: 0
+		height: auto
+		list-style-type: none
+		border-bottom: 1px solid $gray
+
+	&__item
+		border-top: 1px solid $gray
+
+	&__item--logo
+		margin: 0 auto
+		padding: 20px
+		border: 0
+		a
+			transition: opacity .25s ease
+		a:hover
+			opacity: .6
+		a:active
+			opacity: .3
+
+	&__item--delivery,
+	&__item--new,
+	&__item--sale
+		display: none
+
+	&__link
+		position: relative
+		display: block
+		padding: 27px 0
+		padding-left: 23.75%
+		font-size: 16px
+		font-family: $verdana
+		font-weight: bold
+		line-height: 24px
+		color: #000
+		text-decoration: none
+		transition: color .25s ease
+		&:hover
+			color: rgba(#000, .6)
+		&:active
+			color: rgba(#000, .3)
+
+	&__icon
+		position: absolute
+		top: 30px
+		left: 10%
+		opacity: .2
+		&--search
+			width: 18px
+			height: 18px
+		&--cart
+			width: 21px
+			height: 18px
+
+
+@media #{$mobile}
+	.nav--closed
+		.nav__item
+			position: absolute
+			top: -1000px
+		.nav__item--logo
+			position: relative
+			top: 0
+
+	.nav--opened
+		.nav__item
+			position: relative
+		.nav__toggle-inner
+			transform: rotate(45deg)
+			&::before
+				top: 0
+				opacity: 0
+			&::after
+				top: 0
+				transform: rotate(-90deg)
+				opacity: 1
+
+
+@media #{$tablet}
+	.nav__toggle
+		display: none
+
+	.nav__list
+		flex-direction: row
+		flex-wrap: wrap
+		border: 0
+		height: 89px
+		padding: 0
+
+	.nav__item
+		border: 0
+		padding: 0
+
+	.nav__link
+		padding: 22px 0 20px
+		font-size: 14px
+
+	.nav__item--logo
+		width: 48%
+		padding: 22px 0 14px
+		margin: 0
+		order: -3
+		flex-grow: 1
+		border-bottom: 1px solid $gray
+		img
+			width: 113px
+			height: 46px
+
+	.nav__item--search
+		order: -2
+		width: 82px
+		border: 1px solid $gray
+		border-top: none
+		.nav__link
+			font-size: 0
+
+	.nav__icon--search
+		top: 36px
+		left: 50%
+		transform: translateX(-50%)
+
+	.nav__item--cart
+		order: -1
+		width: 265px
+		border-bottom: 1px solid $gray
+		text-align: right
+		.nav__link
+			padding-top: 33px
+			font-size: 16px
+
+	.nav__icon--cart
+		top: 36px
+
+	.nav__item--delivery
+		display: inline
+		flex-grow: 1
+		padding: 20px 0 20px
+		text-align: right
+
+	.nav__item--catalog,
+	.nav__item--order,
+	.nav__item--delivery
+		background-color: $bg
+
+	.nav__item--order
+		.nav__link
+			padding-left: 0
+
+	.nav__item--catalog,
+	.nav__item--order
+		width: 167px
+
+
+@media #{$desk}
+	.nav__link
+		padding-top: 30px
+		padding-bottom: 32px
+	.nav__item--logo
+		width: 260px
+		order: -2
+		padding: 0
+		padding-top: 9px
+		padding-left: 2.5%
+		img
+			width: 149px
+			height: 72px
+
+	.nav__item--catalog
+		width: auto
+		order: -4
+		background-color: #fff
+		border-bottom: 1px solid $gray
+		.nav__link
+			padding-right: 35px
+			font-size: 16px
+
+	.nav__item--order
+		width: auto
+		order: -3
+		background-color: #fff
+		border-bottom: 1px solid $gray
+		border-left: 1px solid $gray
+		.nav__link
+			padding-left: 35px
+			padding-right: 35px
+			font-size: 16px
+
+	.nav__item--new,
+	.nav__item--sale
+		display: inline
+		background-color: $bg
+		.nav__link
+			padding-top: 22px
+
+	.nav__item--new
+		.nav__link
+			padding-right: 30px
+
+	.nav__item--sale
+		.nav__link
+			padding-left: 30px

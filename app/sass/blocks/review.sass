@@ -1,0 +1,133 @@
+.review
+	position: relative
+	padding-top: 25px
+	padding-bottom: 50px
+	&::after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 6px
+		background: url('../img/zigzag-line.svg') repeat-x center
+
+	&__input
+		display: none
+
+	&__item
+		display: none
+
+	&__text
+		margin: 0
+		margin-bottom: 20px
+
+	&__author
+		font-family: $verdana
+		font-weight: 700
+		font-style: normal
+		color: #000
+
+	&__author-link
+		display: inline-block
+		margin-top: 5px
+		color: $main-color
+		text-decoration: none
+		font-weight: 400
+		transition: all .25s ease
+		&:hover
+			color: $accent
+		&:active
+			color: rgba($accent, .3)
+
+	&__buttons
+		display: flex
+		margin-top: 30px
+		margin-bottom: 40px
+		border: 1px solid $gray
+
+	&__button
+		padding: 0
+		width: 50%
+		height: 52px
+		background: none
+		border: 0
+		outline: none
+		cursor: pointer
+		&:first-child
+			border-right: 1px solid $gray
+		&:hover
+			.review__button-icon
+				opacity: .6
+		&:active
+			.review__button-icon
+				opacity: .3
+		&[disabled]
+			cursor: not-allowed
+			.review__button-icon
+				opacity: .1
+			&:hover, &:active
+				.review__button-icon
+					opacity: .1
+
+
+	&__button-icon
+		width: 50px
+		height: 26px
+		transition: all .25s ease
+
+#review-input-1:checked ~ .review__list .review__item:nth-child(1),
+#review-input-2:checked ~ .review__list .review__item:nth-child(2),
+#review-input-3:checked ~ .review__list .review__item:nth-child(3)
+	display: block
+
+
+@media #{$tablet}
+	.review
+		padding-top: 75px
+		padding-bottom: 200px
+		background: url('../img/review.jpg') no-repeat left top
+		&::after
+			height: 17px
+
+	.review__text
+		font-size: 16px
+
+	.review__author
+		font-size: 16px
+
+	.review__buttons
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 167px
+		margin: 0
+		border: 0
+
+	.review__button:first-child
+		border-right: 0
+
+	.review__write
+		position: absolute
+		top: 0
+		right: 0
+		width: 175px
+
+
+@media #{$desk}
+	.review
+		background: none
+		.container
+			position: relative
+			padding-left: 175px
+			padding-right: 175px
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: -75px
+				width: 350px
+				height: 457px
+				background: url('../img/review.jpg') no-repeat left top
+				z-index: -1
+		.section-title
+			margin-bottom: 50px

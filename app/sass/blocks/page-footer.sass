@@ -1,0 +1,29 @@
+.page-footer
+	padding: 20px 0 23px
+	background: #f1f1f1
+	&__logo
+		display: none
+
+
+@media #{$tablet}
+	.page-footer
+		padding-top: 55px
+		padding-bottom: 50px
+		.container
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+
+	.page-footer__logo
+		display: flex
+		svg
+			width: 102px
+			height: 34px
+			transition: all .25s ease
+		&:hover
+			svg
+				fill: $accent
+		&:active
+			svg
+				opacity: .3

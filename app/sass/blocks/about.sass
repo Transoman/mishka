@@ -1,0 +1,76 @@
+.about
+	padding-top: 25px
+	padding-bottom: 25px
+
+	&__item
+		position: relative
+		padding-top: 50px
+		padding-bottom: 30px
+
+	&__deskr
+		margin: 0
+		font-family: $verdana
+		font-size: 16px
+		font-weight: 700
+
+	&__icon
+		position: absolute
+		top: 0
+		left: 0
+		fill: $accent
+		&--flower
+			left: 8px
+			width: 32px
+			height: 37px
+		&--style
+			width: 47px
+			height: 27px
+		&--heart
+			left: 7px
+			width: 34px
+			height: 27px
+		&--handmade
+			left: 3px
+			width: 35px
+			height: 34px
+		&--roket
+			width: 55px
+			height: 23px
+		&--gift
+			left: 3px
+			width: 33px
+			height: 32px
+
+	&__column--right
+		.about__item:last-child
+			padding-bottom: 0
+
+@media #{$tablet}
+	.about
+		padding-top: 50px
+		padding-bottom: 75px
+
+	.about__column--left
+		float: left
+		width: 38.92%
+
+	.about__column--right
+		float: right
+		width: 50%
+
+	.about__column--left .about__item:last-child
+		padding-bottom: 0
+
+	.about__deskr
+		font-size: 20px
+
+
+@media #{$desk}
+	.about
+		padding-top: 60px
+		padding-right: 175px
+		padding-left: 175px
+		padding-bottom: 80px
+
+	.about__column--left
+		width: 37.14%

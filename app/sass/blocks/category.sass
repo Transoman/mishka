@@ -1,0 +1,75 @@
+.category
+	.container
+		display: flex
+		flex-direction: column
+		padding: 0
+
+	&__item
+		position: relative
+		padding: 25px 30px
+		background-color: $accent
+		&:nth-child(2)
+			background-color: #56c3b2
+
+	&__link
+		font-family: $tahoma
+		font-size: 18px
+		font-weight: 700
+		color: #fff
+		text-decoration: none
+
+	&__icon
+		position: absolute
+		top: 21px
+		right: 30px
+		fill: #149080
+		opacity: .5
+
+	&__icon--interior
+		right: 39px
+		width: 40px
+		height: 62px
+
+	&__icon--toy
+		width: 60px
+		height: 60px
+
+
+@media #{$tablet}
+	.category
+		position: relative
+		.container
+			flex-direction: row
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			height: 20px
+			width: 100%
+			background: url('../img/zigzag-fill.svg') repeat-x center
+
+	.category__item
+		width: 50%
+		padding: 30px 35px
+		transition: all .25s ease
+		&:hover
+			// top: -5px
+			transform: translateY(-5px)
+			.category__icon
+				opacity: .7
+		&:active
+			.category__icon
+				opacity: .3
+
+
+	.category__link
+		font-size: 20px
+		line-height: 30px
+		transition: color .25s ease
+		&:active
+			color: rgba(255,255,255,.3)
+
+	.category__icon
+		right: 35px
+		transition: opacity .25s ease

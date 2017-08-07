@@ -1,0 +1,46 @@
+.header-content
+	padding: 80px 40px 120px
+	background-color: $bg
+	background-image: url('../img/hero-mobile.jpg')
+	background-repeat: no-repeat
+	background-size: auto 373px
+	background-position: top center
+	text-align: center
+
+	&__head
+		margin: 0
+		font-size: 24px
+		color: #000
+		line-height: 30px
+		&--block
+			display: block
+
+@media #{$mobile}
+	@media #{$retina}
+		.header-content
+			background-image: url('../img/hero-mobile@2x.jpg')
+
+@media #{$tablet}
+	.header-content
+		padding: 100px 90px
+		height: 570px
+		background-image: url('../img/hero-desktop.jpg')
+		background-size: auto 746px
+		background-position: center 30%
+
+	.header-content__head
+		width: 500px
+		margin: 0 auto
+		font-size: 40px
+		line-height: 50px
+		&--block
+			display: inline
+
+
+@media #{$desk}
+	.header-content
+
+	.header-content__head
+		width: 630px
+		font-size: 50px
+		line-height: 57px

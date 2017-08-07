@@ -1,0 +1,87 @@
+.contact
+	padding-top: 40px
+	padding-bottom: 40px
+
+	&__icon
+		display: none
+
+	&__item
+		margin-bottom: 35px
+
+	&__label
+		display: inline-block
+		vertical-align: top
+		width: 77px
+
+	&__info
+		display: inline-block
+		vertical-align: top
+
+	&__link
+		color: $main-color
+		text-decoration: none
+		border-bottom: 1px solid $accent
+		transition: all .25s ease
+		&:hover
+			color: $accent
+		&:active
+			opacity: .3
+
+	&__btn-wrapp
+		text-align: center
+
+
+@media #{$tablet}
+	.contact
+		position: relative
+		padding-top: 60px
+		padding-bottom: 60px
+
+	.contact__icon
+		position: absolute
+		top: 0
+		right: 0
+		display: block
+		width: 47px
+		height: 81px
+
+	.contact__block
+		display: flex
+		margin-bottom: 50px
+
+	.contact__item
+		width: 50%
+		margin-bottom: 0
+
+	.contact__label,
+	.contact__info
+		font-size: 16px
+
+	.contact__write
+		width: 230px
+
+
+@media #{$desk}
+	.contact
+		padding-bottom: 110px
+		.container
+			padding-top: 75px
+			padding-left: 175px
+			padding-right: 525px
+
+	.contact__icon
+		top: 75px
+		right: auto
+		left: 60px
+
+	.contact__block
+		flex-direction: column
+
+	.contact__item
+		width: auto
+		margin-bottom: 35px
+
+	.contact__btn-wrapp
+		text-align: left
+		&.container
+			padding-top: 0

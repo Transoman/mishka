@@ -1,0 +1,46 @@
+.socials
+	display: flex
+	justify-content: center
+	align-items: flex-end
+	margin: 0 0 20px
+	padding: 0 55px 15px
+	list-style-type: none
+	font-size: 0
+	border-bottom: 1px solid #e5e5e5
+
+	&__item
+		margin-right: 40px
+		&:last-child
+			margin-right: 0
+
+	&__link
+		display: block
+		&:hover
+			.socials__icon
+				fill: $accent
+		&:active
+			.socials__icon
+				opacity: .3
+
+
+	&__icon
+		transition: all .25s ease
+		&--insta
+			width: 22px
+			height: 21px
+
+		&--fb
+			width: 15px
+			height: 28px
+
+		&--twitter
+			width: 23px
+			height: 20px
+
+
+@media #{$tablet}
+	.socials
+		margin: 0
+		margin-left: 80px
+		padding: 0
+		border: 0

@@ -1,0 +1,135 @@
+.good-week
+	position: relative
+	padding-top: 25px
+	padding-bottom: 160px
+	&::after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 6px
+		width: 100%
+		background: url('../img/zigzag-line.svg') repeat-x center
+
+	&__head
+		margin: 0
+		margin-bottom: 6px
+		font-family: $verdana
+		font-weight: 700
+		font-size: 23px
+		line-height: 30px
+		color: #000
+
+	&__label
+		color: $accent
+		font-size: 16px
+		font-weight: 700
+		text-transform: uppercase
+
+	&__deskr
+		margin: 20px 0
+
+	&__characteristics
+		width: 100%
+		margin-bottom: 30px
+		border-collapse: collapse
+		td
+			padding: 10px 0
+			border-bottom: 1px solid $gray
+
+	&__img-wrapp
+		margin-bottom: 25px
+		text-align: center
+
+	&__price-wrapp
+		position: absolute
+		bottom: -120px
+		left: 0
+		width: 100%
+		padding-right: 9.375%
+		padding-left: 9.375%
+		text-align: center
+
+	&__price
+		display: inline-block
+		margin-bottom: 20px
+		font-family: $verdana
+		font-size: 16px
+		line-height: 24px
+		font-weight: 700
+
+
+@media #{$tablet}
+	.good-week
+		position: relative
+		padding-top: 40px
+		padding-bottom: 70px
+		&::after
+			height: 17px
+
+	.good-week__head
+		font-size: 40px
+		margin-bottom: 55px
+
+	.good-week__label
+		position: absolute
+		top: -15px
+		right: 30px
+		width: 75px
+		text-align: center
+
+	.good-week__container
+		display: flex
+
+	.good-week__content
+		width: 50%;
+		padding-right: 40px
+		display: flex
+		flex-direction: column
+		align-content: space-between
+		flex-grow: 1
+		justify-content: space-between
+
+	.good-week__deskr
+		margin-top: 0
+		margin-bottom: 35px
+		font-size: 16px
+
+	.good-week__characteristics
+		font-size: 15px
+
+	.good-week__img-wrapp
+		margin-bottom: 0
+		text-align: right
+
+	.good-week__price-wrapp
+		position: static
+		padding: 0
+
+	.good-week__price
+		font-size: 18px
+
+
+@media #{$desk}
+	.good-week
+		padding-top: 70px
+		padding-bottom: 95px
+		&::after
+			height: 23px
+
+	.good-week__head
+		position: absolute
+		top: 50px
+		left: 175px
+		margin: 0
+		font-size: 50px
+		line-height: 57px
+
+	.good-week__label
+		top: 55px
+		left: 50px
+
+	.good-week__content
+		padding-top: 160px
+		padding-right: 60px
+		padding-left: 175px
