@@ -485,7 +485,8 @@ img {
     border: 0;
     outline: none;
     font-size: 0;
-    z-index: 1; }
+    z-index: 1;
+    cursor: pointer; }
     .nav__toggle-inner {
       position: relative;
       display: block;
@@ -566,6 +567,11 @@ img {
     .nav__icon--cart {
       width: 21px;
       height: 18px; }
+    .nav__icon:hover {
+      fill: #63d1bb;
+      opacity: 1; }
+    .nav__icon:active {
+      opacity: .3; }
 
 .header-content {
   padding: 80px 40px 120px;
@@ -929,7 +935,7 @@ img {
     padding: 22px 0 20px;
     font-size: 14px; }
   .nav__item--logo {
-    width: 48%;
+    width: calc(100% - 347px);
     padding: 22px 0 14px;
     margin: 0;
     -webkit-box-ordinal-group: -2;
