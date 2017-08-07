@@ -47,8 +47,9 @@
 		border-top: 1px solid $gray
 
 	&__item--logo
+		width: 86px
 		margin: 0 auto
-		padding: 20px
+		padding: 20px 0
 		border: 0
 		a
 			transition: opacity .25s ease
@@ -76,8 +77,13 @@
 		transition: color .25s ease
 		&:hover
 			color: rgba(#000, .6)
+			.nav__icon
+				fill: $accent
+				opacity: 1
 		&:active
 			color: rgba(#000, .3)
+			.nav__icon
+				opacity: .3
 
 	&__icon
 		position: absolute
@@ -90,11 +96,6 @@
 		&--cart
 			width: 21px
 			height: 18px
-		&:hover
-			fill: $accent
-			opacity: 1
-		&:active
-			opacity: .3
 
 
 @media #{$mobile}
