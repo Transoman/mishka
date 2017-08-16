@@ -1,0 +1,119 @@
+.process
+	padding-bottom: 60px
+
+	&__wrapp
+		position: relative
+		padding-top: 95px
+		border: 1px solid #ececec
+
+	&__title
+		position: absolute
+		top: 0
+		left: 0
+		margin: 22px 43px 22px 90px
+		font-family: $verdana
+		font-size: 16px
+		font-weight: 700
+
+	&__icon
+		position: absolute
+		top: 10px
+		left: -57px
+		width: 32px
+		height: 22px
+		fill: $accent
+
+	&__video
+		display: block
+		width: 100%
+
+	&__content
+		padding: 30px 34px
+
+	&__descr
+		margin: 0
+		margin-bottom: 25px
+
+	&__btn
+		padding-right: 0
+		padding-left: 0
+
+	////////////
+
+	.process__video-wrapp
+		position: relative
+
+	.video__play
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 101px
+		height: 78px
+		margin: 0
+		padding: 0
+		border: 0
+		transform: translateX(-50%) translateY(-50%)
+		background: url('../img/btn-play.svg') no-repeat center
+		cursor: pointer
+		transition: all .25s ease
+		&:hover
+			width: 123px
+			height: 94px
+		&:active
+			width: 81px
+			height: 62px
+			opacity: .5
+
+@media #{$tablet}
+	.process
+		padding-bottom: 60px
+
+	.process__wrapp
+		display: flex
+		flex-direction: column
+		padding-top: 0
+
+	.process__title
+		position: relative
+		margin-left: 56px
+		margin-top: 35px
+		margin-bottom: 30px
+		font-size: 18px
+		br
+			display: none
+
+	.process__icon
+		top: 0
+		left: -60px
+
+	.process__descr
+		margin-bottom: 35px
+		font-size: 16px
+
+	.process__content
+		padding: 0 42px 45px
+
+
+@media #{$desk}
+	.process
+		padding-bottom: 105px
+
+	.process__wrapp
+		flex-direction: row
+
+	.process__video-wrapp
+		width: 65.047%
+
+	.process__content
+		width: 35.047%
+		padding: 90px 58px 60px 80px
+
+	.process__title
+		margin: 0
+		margin-bottom: 30px
+
+	.process__icon
+		left: 0
+		top: -55px
+
+

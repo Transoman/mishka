@@ -115,6 +115,56 @@ if(reviewBtnRight) {
 }( window, document ) );
 
 
+// Poster to video
+var poster = document.querySelector('.process__video');
+var sizeWindow = window.innerWidth;
+
+
+if(poster) {
+	setPoster(sizeWindow);
+
+	window.addEventListener('resize', function() {
+		sizeWindow = window.innerWidth;
+		console.log(sizeWindow);
+
+		setPoster(sizeWindow);
+
+		// if(sizeWindow >= 768) {
+		// 	poster.setAttribute('poster', 'img/video-tablet.jpg');
+		// }
+
+	});
+}
+
+function setPoster (sizeWindow) {
+
+	if ( sizeWindow <= 767 ) {
+		poster.setAttribute('poster', 'img/video-mobile.jpg');
+	}
+	else if ( sizeWindow >= 768 && sizeWindow <= 1049) {
+		poster.setAttribute('poster', 'img/video-tablet.jpg');
+	}
+	else if ( sizeWindow >= 1050) {
+		poster.setAttribute('poster', 'img/video-desktop.jpg');
+	}
+
+
+	// switch (sizeWindow) {
+	// 	case 0:
+	// 	case 767:
+	// 		poster.setAttribute('poster', 'img/video-mobile.jpg');
+	// 		break;
+	// 	case 768:
+	// 	case 1049:
+	// 		poster.setAttribute('poster', 'img/video-tablet.jpg');
+	// 		break;
+	// 	case 1050:
+	// 		poster.setAttribute('poster', 'img/video-desktop.jpg');
+	// 		break;
+	// }
+}
+
+
 // Maps
 function initMap() {
 	var myLatLng = {lat: 59.9387942, lng: 30.3230833};

@@ -1,12 +1,21 @@
 .page-header
-	// max-width: 1150px
-	// margin: 0 auto
 	background-color: $bg
 
 	&__top-line
 		position: relative
 
 @media #{$tablet}
+	.page-header
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			height: 20px
+			width: 100%
+			background: url('../img/zigzag-fill.svg') repeat-x center
+
 	.page-header__top-line
 		margin-bottom: 60px
 		border-bottom: 1px solid $gray

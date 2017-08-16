@@ -1,0 +1,110 @@
+.product
+	padding-top: 30px
+	padding-bottom: 30px
+
+	&__item
+		display: flex
+		flex-direction: column
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+
+	&__img
+		width: 100%
+
+	&__content
+		padding: 27px
+		border: 1px solid #ededed
+
+	&__title
+		margin: 0
+		font-family: $verdana
+		font-size: 16px
+		font-weight: 700
+		margin-bottom: 15px
+
+	&__link
+		color: #000
+		text-decoration: none
+		transition: all .25s ease
+		&:hover
+			color: rgba(0,0,0, .6)
+		&:active
+			color: rgba(0,0,0, .3)
+
+	&__parameters
+		margin: 0
+		margin-bottom: 20px
+
+	&__price-wrapp
+		position: relative
+		padding-top: 20px
+		border-top: 1px solid #ececec
+
+	&__price
+		font-family: $verdana
+		font-weight: 700
+
+	&__btn-buy
+		&:hover .product__icon--cart
+			fill: $accent
+			opacity: 1
+		&:active .product__icon--cart
+			fill: $accent
+			opacity: .3
+
+
+	&__icon
+		position: absolute
+		right: 0
+		width: 20px
+		height: 19px
+		fill: #000
+		opacity: .2
+
+
+@media #{$tablet}
+	.product
+		padding-top: 80px
+		padding-bottom: 50px
+
+	.product__item
+		flex-direction: row
+
+	.product__content
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		flex-grow: 1
+
+	.product__title
+		margin-bottom: 10px
+		font-size: 18px
+
+	.product__parameters
+		font-size: 15px
+		flex-grow: 1
+
+	.product__price
+		font-size: 16px
+
+@media #{$desk}
+	.product
+		display: flex
+		padding-top: 130px
+		padding-bottom: 55px
+
+	.product__item
+		flex-direction: column
+		width: 33.33%
+		margin-right: 50px
+		margin-bottom: 0
+		&:last-child
+			margin-right: 0
+		&:hover .product__content
+			box-shadow: 0 6px 10px rgba(0,0,0,.1)
+		&:active .product__content
+			box-shadow: 0 3px 5px rgba(0,0,0,.1)
+
+	.product__content
+		transition: all .25s ease

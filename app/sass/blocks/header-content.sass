@@ -6,10 +6,15 @@
 	background-size: auto 373px
 	background-position: top center
 	text-align: center
+	&--inner
+		padding: 70px 0
+		background-image: none
 
 	&__head
 		margin: 0
+		font-family: $verdana
 		font-size: 24px
+		font-weight: 700
 		color: #000
 		line-height: 30px
 		&--block
@@ -19,6 +24,8 @@
 	@media #{$retina}
 		.header-content
 			background-image: url('../img/hero-mobile@2x.jpg')
+		.header-content--inner
+			background-image: none
 
 @media #{$tablet}
 	.header-content
@@ -27,6 +34,11 @@
 		background-image: url('../img/hero-desktop.jpg')
 		background-size: auto 746px
 		background-position: center 30%
+
+	.header-content--inner
+		padding: 35px 0 80px
+		height: auto
+		background-image: none
 
 	.header-content__head
 		width: 500px
@@ -38,7 +50,8 @@
 
 
 @media #{$desk}
-	.header-content
+	.header-content--innet
+		padding: 45px 0 100px
 
 	.header-content__head
 		width: 630px

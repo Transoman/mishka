@@ -13,6 +13,7 @@ var gulp 				 = require('gulp'),
 		del 				 = require('del'),
 		run 				 = require('run-sequence'),
 		plumber 		 = require('gulp-plumber'),
+		cheerio = require('gulp-cheerio'),
 		browserSync  = require('browser-sync').create();
 
 // Static server
@@ -64,6 +65,15 @@ gulp.task('symbols', function() {
 		.pipe(svgmin())
 		.pipe(svgstore({
 			inlineSvg: true
+		}))
+		.pipe(cheerio({
+			run: function($) {
+				$('[fill]').removeAttr('fill');
+				$('[style]').removeAttr('style');
+				$('title').remove();
+				$('defs').remove();
+				$('svg').attr('style', 'display:none');
+			}
 		}))
 		.pipe(rename('symbols.html'))
 		.pipe(gulp.dest('app/img'));
