@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Интернет-магазин вязаных изделий ручной работы">
 
-		<title>Каталог | Mishka</title>
+		<title>Вязание на заказ | Mishka</title>
 
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 		<link rel="shortcut icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -66,95 +66,114 @@
 			</div><!-- /.page-header__top-line -->
 
 			<div class="header-content header-content--inner">
-				<h1 class="header-content__head">Каталог товаров</h1>
+				<h1 class="header-content__head">Вязание на заказ</h1>
 			</div>
 
 		</header>
 
 		<main>
 
-			<section class="product container">
+			<section class="order container">
 
-				<article class="product__item">
-					<div class="produst__img-wrapp">
-						<a href="#" class="product__link">
-							<picture>
-								<source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
-								<source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
-								<img src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик" class="product__img">
-							</picture>
-						</a>
-					</div>
-					<div class="product__content">
-						<h2 class="product__title"><a href="#" class="product__link">Зайчик-попрыгайчик</a></h2>
-						<p class="product__parameters">Рост 30 см, вес 200 г</p>
-						<div class="product__price-wrapp">
-							<span class="product__price">1200 руб.</span>
-							<a href="#" class="product__btn-buy">
-								<svg class="product__icon product__icon--cart"><use xlink:href="#icon-cart"></use></svg>
-							</a>
+				<h2 class="visually-hidden">Форма для заказа</h2>
+
+				<p class="order__text">Мы будем рады воплотить в жизнь ваши пожелания! <br>Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
+
+				<form action="#" class="order-form" method="post">
+					<fieldset>
+						<legend class="order-form__head">Тип</legend>
+
+						<input type="radio" name="type" id="accessory" class="order-form__radio" checked>
+						<label for="accessory" class="order-form__title order-form__title--radio">Аксессуар для интерьера</label>
+
+						<input type="radio" name="type" id="toys" class="order-form__radio">
+						<label for="toys" class="order-form__title order-form__title--radio">Детская игрушка</label>
+					</fieldset>
+
+					<fieldset class="order-form__field-color">
+						<legend class="order-form__head">Цвет</legend>
+
+						<div class="order-form__chekcbox-wrapp">
+							<input type="checkbox" name="color" id="white" class="order-form__checkbox" checked>
+							<label for="white" class="order-form__title order-form__title--checkbox">Белый</label>
+
+							<input type="checkbox" name="color" id="grey" class="order-form__checkbox" checked>
+							<label for="grey" class="order-form__title order-form__title--checkbox">Серый</label>
+
+							<input type="checkbox" name="color" id="tiffani" class="order-form__checkbox">
+							<label for="tiffani" class="order-form__title order-form__title--checkbox">«Тиффани»</label>
+
+							<input type="checkbox" name="color" id="black" class="order-form__checkbox">
+							<label for="black" class="order-form__title order-form__title--checkbox">Черный</label>
+
+							<input type="checkbox" name="color" id="pink" class="order-form__checkbox">
+							<label for="pink" class="order-form__title order-form__title--checkbox">Розовый</label>
+
+							<input type="checkbox" name="color" id="orange" class="order-form__checkbox">
+							<label for="orange" class="order-form__title order-form__title--checkbox">Оранжевый</label>
 						</div>
-					</div>
-				</article>
+					</fieldset>
 
-				<article class="product__item">
-					<div class="procust__img-wrapp">
-						<picture>
-							<source media="(min-width: 1150px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
-							<source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
-							<img src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья" class="product__img">
-						</picture>
-					</div>
-					<div class="product__content">
-						<h2 class="product__title"><a href="#" class="product__link">Корзинка для белья</a></h2>
-						<p class="product__parameters">Диаметр 15 см, высота 10 см</p>
-						<div class="product__price-wrapp">
-							<span class="product__price">690 руб.</span>
-							<a href="#" class="product__btn-buy">
-								<svg class="product__icon product__icon--cart"><use xlink:href="#icon-cart"></use></svg>
-							</a>
+					<fieldset>
+						<legend class="order-form__head">ФИО</legend>
+
+						<div class="order-form__field-wrapp">
+
+							<div class="order-form__field">
+								<label for="lastname" class="order-form__title">Фамилия:</label>
+								<input type="text" name="lastname" class="order-form__input" id="lastname" placeholder="Укажите фамилию" required>
+							</div>
+
+							<div class="order-form__field">
+								<label for="name" class="order-form__title">Имя:</label>
+								<input type="text" name="name" class="order-form__input" id="name" placeholder="Введите ваше имя" required>
+							</div>
+
+							<div class="order-form__field">
+								<label for="surname" class="order-form__title">Отчество:</label>
+								<input type="text" name="surname" class="order-form__input" id="surname" placeholder="Отчество, если желаете">
+							</div>
+
 						</div>
-					</div>
-				</article>
 
-				<article class="product__item">
-					<div class="procust__img-wrapp">
-						<picture>
-							<source media="(min-width: 1150px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
-							<source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
-							<img src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек" class="product__img">
-						</picture>
-					</div>
-					<div class="product__content">
-						<h2 class="product__title"><a href="#" class="product__link">Большая корзинка для игрушек</a></h2>
-						<p class="product__parameters">Диаметр 30 см, высота 30 см</p>
-						<div class="product__price-wrapp">
-							<span class="product__price">1500 руб.</span>
-							<a href="#" class="product__btn-buy">
-								<svg class="product__icon product__icon--cart"><use xlink:href="#icon-cart"></use></svg>
-							</a>
+					</fieldset>
+
+					<fieldset class="order-form__field-phone">
+						<legend class="order-form__head order-form__head--phone">Тел</legend>
+
+						<div class="order-form__wrapp">
+							<input type="tel" name="phone" class="order-form__input" id="phone" placeholder="+7 XXX XX XX" required>
+							<svg class="order-form__icon order-form__icon--phone"><use xlink:href="#icon-phone"></use></svg>
 						</div>
+
+					</fieldset>
+
+					<fieldset>
+						<legend class="order-form__head order-form__head--email">E-mail</legend>
+
+						<div class="order-form__wrapp">
+							<input type="email" name="email" class="order-form__input" id="email" placeholder="Ваш e-mail" required>
+							<svg class="order-form__icon order-form__icon--mail"><use xlink:href="#icon-mail"></use></svg>
+						</div>
+
+					</fieldset>
+
+					<fieldset>
+						<legend class="order-form__head">Доп</legend>
+
+						<div class="order-form__wrapp">
+							<textarea name="deskr" class="order-form__textarea" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
+						</div>
+
+					</fieldset>
+
+					<div class="order-form__bottom">
+						<input type="submit" name="sumbit" value="ОТПРАВИТЬ ЗАКАЗ" class="btn order-form__btn">
+
+						<p class="order-form__required">Все поля являются обязательными</p>
 					</div>
-				</article>
 
-			</section>
-
-			<section class="process container">
-
-				<div class="process__wrapp">
-
-					<div class="process__video-wrapp">
-						<video src="#" poster="img/video-mobile.jpg" class="video process__video"></video>
-						<button class="video__play"></button>
-					</div>
-
-					<div class="process__content">
-						<h3 class="process__title"><svg class="process__icon process__icon--video"><use xlink:href="#icon-video"></use></svg>Процесс<br> производства</h3>
-						<p class="process__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-						<a href="#" class="btn process__btn">СДелать заказ</a>
-					</div>
-
-				</div>
+				</form>
 
 			</section>
 

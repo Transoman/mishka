@@ -70,8 +70,10 @@ gulp.task('symbols', function() {
 			run: function($) {
 				$('[fill]').removeAttr('fill');
 				$('[style]').removeAttr('style');
+				$('[class]').removeAttr('class');
 				$('title').remove();
 				$('defs').remove();
+				$('style').remove();
 				$('svg').attr('style', 'display:none');
 			}
 		}))

@@ -58,6 +58,7 @@ if(reviewBtnRight) {
 	});
 }
 
+// Svg-sprite LocalStorage
 ;( function( window, document )
 {
 	'use strict';
@@ -119,25 +120,16 @@ if(reviewBtnRight) {
 var poster = document.querySelector('.process__video');
 var sizeWindow = window.innerWidth;
 
-
 if(poster) {
 	setPoster(sizeWindow);
 
 	window.addEventListener('resize', function() {
 		sizeWindow = window.innerWidth;
-		console.log(sizeWindow);
-
 		setPoster(sizeWindow);
-
-		// if(sizeWindow >= 768) {
-		// 	poster.setAttribute('poster', 'img/video-tablet.jpg');
-		// }
-
 	});
 }
 
 function setPoster (sizeWindow) {
-
 	if ( sizeWindow <= 767 ) {
 		poster.setAttribute('poster', 'img/video-mobile.jpg');
 	}
@@ -147,21 +139,6 @@ function setPoster (sizeWindow) {
 	else if ( sizeWindow >= 1050) {
 		poster.setAttribute('poster', 'img/video-desktop.jpg');
 	}
-
-
-	// switch (sizeWindow) {
-	// 	case 0:
-	// 	case 767:
-	// 		poster.setAttribute('poster', 'img/video-mobile.jpg');
-	// 		break;
-	// 	case 768:
-	// 	case 1049:
-	// 		poster.setAttribute('poster', 'img/video-tablet.jpg');
-	// 		break;
-	// 	case 1050:
-	// 		poster.setAttribute('poster', 'img/video-desktop.jpg');
-	// 		break;
-	// }
 }
 
 
@@ -197,5 +174,25 @@ function initMap() {
 			url: icon
 			// scaledSize: new google.maps.Size(67, 100)
 		}
+	});
+}
+
+
+// Mask phone
+var input = document.getElementById('phone');
+var newValue;
+var inputValue;
+
+if(input) {
+	input.addEventListener('keyup', function(e) {
+		inputValue = input.value;
+
+		if(e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode >= 96 && e.keyCode <= 105) {
+		}
+		else {
+			newValue = inputValue.replace(/[a-zA-zа-яА-Я]/g, "");
+			input.value = newValue;
+		}
+
 	});
 }

@@ -1,0 +1,253 @@
+.order-form
+
+	fieldset
+		padding: 0
+		margin: 0
+		margin-bottom: 10px
+		border: none
+		border-top: 1px solid $accent
+
+	&__head
+		margin-bottom: 25px
+		font-size: 16px
+		font-weight: 700
+		color: $accent
+		text-transform: uppercase
+		border: none
+		padding-right: 30px
+
+	&__head--phone, &__head--email
+		margin-bottom: 5px
+
+	&__radio, &__checkbox
+		display: none
+
+	&__radio
+		&:checked + .order-form__title--radio::after
+			content: ''
+			position: absolute
+			top: 3px
+			left: 12px
+			width: 16px
+			height: 16px
+			background-color: $accent
+			border-radius: 50%
+
+	&__checkbox
+		&:checked + .order-form__title--checkbox::after
+			content: ''
+			position: absolute
+			top: -5px
+			left: 15px
+			width: 10px
+			height: 25px
+			border-bottom: 2px solid $main-color
+			border-right: 2px solid $main-color
+			transform: rotate(45deg)
+
+	&__title
+		display: block
+		font-family: $verdana
+		font-weight: 700
+		font-size: 16px
+
+	&__title--radio, &__title--checkbox
+		position: relative
+		padding-left: 60px
+		margin-bottom: 25px
+		cursor: pointer
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: -9px
+			width: 40px
+			height: 40px
+			border: 2px solid $main-color
+	&__title--radio::before
+		border-radius: 50%
+
+	&__input
+		width: 100%
+		padding: 13px 0 15px
+		margin-bottom: 20px
+		border: none
+		outline: none
+		border-bottom: 2px solid #000
+		font-family: $verdana
+		font-size: 16px
+		transition: all .25s ease
+		&:hover
+			border-color: $accent
+			+ .order-form__icon
+				fill: $accent
+		&:focus
+			border-color: $accent
+			+ .order-form__icon
+				fill: $accent
+			&::placeholder
+				color: rgba($main-color, 1)
+		&:focus:required:invalid
+			border-color: $tomato
+
+	&__wrapp
+		position: relative
+
+	&__icon
+		position: absolute
+		right: 0
+		top: 10px
+		fill: rgba(0,0,0,.2)
+		transition: all .25s ease
+
+	&__icon--phone
+		width: 25px
+		height: 25px
+		right: 6px
+
+	&__icon--mail
+		width: 42px
+		height: 32px
+
+	&__textarea
+		width: 100%
+		height: 150px
+		padding: 15px
+		margin-bottom: 55px
+		font-family: $verdana
+		font-size: 16px
+		color: $main-color
+		border: 2px solid $main-color
+		outline: none
+		resize: none
+		transition: all .25s ease
+		&:hover
+			border-color: $accent
+		&:focus
+			border-color: $accent
+			&::placeholder
+				color: rgba($main-color, 1)
+		&:focus:required:invalid
+			border-color: $tomato
+
+	&__input::placeholder, &__textarea::placeholder
+		color: rgba($main-color, .3)
+		transition: all .25s ease
+
+	&__btn
+		padding-top: 15px
+		padding-bottom: 15px
+		font-size: 16px
+
+	&__required
+		display: none
+
+
+@media #{$tablet}
+
+	.order-form fieldset
+		position: relative
+		padding-left: 167px
+		margin-bottom: 65px
+		border: none
+
+	.order-form__head
+		position: absolute
+		left: 0
+		top: 0
+
+	.order-form__title
+		font-size: 18px
+
+	.order-form__title--radio
+		margin-bottom: 50px
+		padding-left: 80px
+
+	.order-form__title--radio::before
+		width: 52px
+		height: 52px
+		top: -13px
+
+	.order-form__radio:checked + .order-form__title--radio::after
+		width: 20px
+		height: 20px
+		left: 16px
+		top: 3px
+
+	.order-form__chekcbox-wrapp
+		display: flex
+		flex-wrap: wrap
+
+	.order-form__title--checkbox
+		padding-left: 80px
+		margin-bottom: 50px
+		width: 50%
+
+	.order-form__title--checkbox::before
+		width: 52px
+		height: 52px
+		top: -12px
+
+	.order-form__checkbox:checked + .order-form__title--checkbox::after
+		left: 19px
+		top: -6px
+		width: 14px
+		height: 30px
+
+
+	.order-form__field
+		display: flex
+		align-items: flex-start
+		margin-bottom: 30px
+
+	.order-form__field .order-form__title
+		margin-right: 25px
+
+	.order-form__field .order-form__input
+		margin-bottom: 0
+		padding-top: 0
+
+	fieldset.order-form__field-phone
+		margin-bottom: 30px
+
+	.order-form__head--phone,
+	.order-form__head--email
+		top: 14px
+
+	.order-form__input
+		padding-left: 15px
+		font-size: 18px
+
+	.order-form__textarea
+		height: 143px
+		margin-bottom: 0
+
+	.order-form__btn
+		width: 230px
+
+	.order-form__required
+		display: block
+		float: right
+		font-size: 16px
+
+
+@media #{$desk}
+	.order-form fieldset
+		padding-left: 175px
+		padding-right: 175px
+
+	fieldset.order-form__field-color
+		padding-right: 0
+
+	.order-form__head
+		left: 65px
+
+	.order-form__title--checkbox
+		width: 33.33%
+
+	.order-form__head--email
+		left: 55px
+
+	.order-form__bottom
+		padding-left: 175px
+		padding-right: 175px
