@@ -117,6 +117,9 @@ gulp.task('build', ['clean', 'styles', 'images', 'svg'], function(){
 
 	gulp.src(['app/js/**/*'])
 		.pipe(gulp.dest('dist/js'));
+		
+	gulp.src(['app/img/symbols.html'])
+		.pipe(gulp.dest('dist/img'));
 
 	gulp.src(['app/*.html'])
 		.pipe(gulp.dest('dist'));

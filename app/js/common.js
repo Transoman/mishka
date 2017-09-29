@@ -152,12 +152,7 @@ function initMap() {
 		scrollwheel: false
 	});
 
-	var isIE11 = !!(navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/)); // Detect whether it is IE11
 	var icon = '../img/map-marker.png';
-
-	// if(isIE11) {
-	// 	icon = '../img/map-marker.png';
-	// }
 
 	map.addListener('click', function(){
 		map.setOptions({scrollwheel: true});
@@ -172,7 +167,6 @@ function initMap() {
 		title: 'Mishka',
 		icon: {
 			url: icon
-			// scaledSize: new google.maps.Size(67, 100)
 		}
 	});
 }
@@ -187,10 +181,11 @@ if(input) {
 	input.addEventListener('keyup', function(e) {
 		inputValue = input.value;
 
+		// Проверяем нажати ли числа
 		if(e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode >= 96 && e.keyCode <= 105) {
 		}
 		else {
-			newValue = inputValue.replace(/[a-zA-zа-яА-Я]/g, "");
+			newValue = inputValue.replace(/[a-zа-я]/gi, "");
 			input.value = newValue;
 		}
 
